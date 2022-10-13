@@ -46,7 +46,7 @@ $(document).ready(function () {
         const divError = document.getElementById("error")
         const divTable = document.getElementById("dvTableFS")
         const divTable2 = document.getElementById("dvTableFNS")
-        const url = 'http://localhost:3000/search?user=' + userhand + '&friend=' + frhand + '&tags=' + encodeURIComponent(JSON.stringify(opts)) + ''
+        const url = '/search?user=' + userhand + '&friend=' + frhand + '&tags=' + encodeURIComponent(JSON.stringify(opts)) + ''
         fetch(url).then((response) => {
             response.json().then((data) => {
                 // console.log(JSON.stringify(data.solved))
