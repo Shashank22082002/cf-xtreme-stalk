@@ -7,8 +7,11 @@ const submissionsFunc = (handle, tags, callback) => {
             callback(err, undefined)
         else if (!response.body || response.body.status === "FAILED")
             callback(response.body.comment, undefined)
-        else if (response.body.result.length === 0)
-            callback("No submissions found", undefined)
+        else if (!response.body.result || response.body.result.length === 0)
+        {
+            console.log(response.body)
+            callback("No submissions found"+response.body, undefined)
+        }
         else {
             if (tags[0] === '' && tags.length == 1) {
                 // console.log('Special case tags: ', response.body.result)

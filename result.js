@@ -1,6 +1,4 @@
-const e = require('express');
 const filterFunc = require('./filter')
-
 
 // given 2 lists - listA, listB containing problem ids
 // find all problems from listB which do not appear in listA
