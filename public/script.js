@@ -16,20 +16,20 @@ console.log("Starting")
 
 
 // jquery to have multiple select functionality in select list
-$("select").mousedown(function(e){
+$("select").mousedown(function (e) {
     e.preventDefault();
-	var select = this;
+    var select = this;
     var scroll = select.scrollTop;
-    
+
     e.target.selected = !e.target.selected;
-    
-    setTimeout(function(){select.scrollTop = scroll;}, 0);
-    
+
+    setTimeout(function () { select.scrollTop = scroll; }, 0);
+
     $(select).focus();
-}).mousemove(function(e){e.preventDefault()});
+}).mousemove(function (e) { e.preventDefault() });
 
 const createLink = (id, number) => {
-    link = 'https://codeforces.com/problemset/problem/'+id+'/'+number+'';
+    link = 'https://codeforces.com/problemset/problem/' + id + '/' + number + '';
     return link;
 }
 
@@ -70,7 +70,8 @@ $(document).ready(function () {
                     divTable2.style.display = "block"
                     divError.style.display = "none"
                     var table = document.createElement("TABLE")
-
+                    table.style.display = "grid";
+                    table.style.justifyContent = "center";
                     var columnCount = results[0].length;
 
                     //Add the header row.
@@ -99,13 +100,16 @@ $(document).ready(function () {
 
                     var head1 = document.createElement("H2")
                     head1.innerHTML = "Solved: "
-
+                    head1.style.display = "grid";
+                    head1.style.justifyContent = "center";
                     divTable.appendChild(head1)
                     divTable.appendChild(table);
 
 
                     // unsolved table...
                     var table2 = document.createElement("TABLE")
+                    table2.style.display = "grid";
+                    table2.style.justifyContent = "center";
                     var results2 = new Array()
                     results2.push(["Problem Name", "Rating", "Tags", "Link"])
 
@@ -142,7 +146,8 @@ $(document).ready(function () {
                     divTable2.innerHTML = "";
                     var head2 = document.createElement("H2")
                     head2.innerHTML = "Not Solved(but Attempted): "
-
+                    head2.style.display = "grid";
+                    head2.style.justifyContent = "center";
                     divTable2.appendChild(head2)
                     divTable2.appendChild(table2);
 
