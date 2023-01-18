@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.bdy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    font-family: 'Roboto', sans-serif;
+    margin: 100px 100px;
+    height: 60vh;
+}
+
+.main-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 20px 0;
+    box-sizing: border-box;
+}
+
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+button{
+    margin: 8px 0;
+    padding: 13px 30px;
+    font-size: medium;
+    background-color: #e7e7e7; color: black; /* Gray */
+}
+
+.dropdown-check-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+select{
+    width: 300px;
+    padding: 5px 4px;
+    margin: 20px 20px;
+    user-select: none;
+    border: 2px solid lightgray;
+    box-shadow: gray;
+}
+
+::selection{
+    background-color: azure;
+}
+
+option{
+    font-size: medium;
+    padding: 5px 0px;
+}
+
+#tablearea{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* border: 2px solid black; */
+    font-family: 'Roboto', sans-serif;
+    padding: 40px 40px;
+    margin: 100px 100px;
+    height: 60vh;
+}
+
+.navbar {
+  font-family: 'Roboto', sans-serif;
+  /* background-color: #1D1F21; */
+  /* color: #fff; */
+  height: 60px;
+}
+
+.navbar .logo {
+  height: 60px;
+  margin-left: 20px;
+}
+
+.navbar .title {
+  font-size: 30px;
+  display: grid;
+  justify-content: center;
+  font-weight: bold;
+  margin-left: 30px;
+}
